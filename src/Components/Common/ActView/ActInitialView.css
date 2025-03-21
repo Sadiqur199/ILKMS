@@ -1,0 +1,78 @@
+.ActInitial_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: relative;
+    margin-left: 160px;
+    margin-right: 20px;
+    /* vh means display height */
+    min-height: calc(100vh - 225px);
+    margin-top: 60px;
+    gap: 1rem;
+
+}
+
+.ActInitial_content {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 400px; */
+    width: 100%;
+    background: white;
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ActInitial_content_header {
+    display: flex;
+    background: #CEE9FD;
+    width: 100%;
+    padding: 5px;
+}
+
+.ActInitial_content_body {
+    display: flex;
+    /* justify-content: center; */
+
+}
+
+.ActInitial_cover {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+
+    margin: 20px;
+    /* height: 400px; */
+    width: 250px;
+}
+
+.ActInitial_cover_size {
+    height: 300px;
+    width: 250px;
+}
+
+.ActInitial_overflow_ebook {
+    overflow: hidden;
+    max-height: 320px;
+    position: relative;
+    padding-top: 25px;
+}
+
+.ActInitial_overflow_ebook .read_more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: -10px;
+    padding: 15px 0;
+    font-size: 15px;
+
+    /* "transparent" only works here because == rgba(0,0,0,0) */
+    background-image: linear-gradient(to bottom, transparent, rgb(230, 230, 231));
+}
+
+.test {
+    background: #87cefa;
+    
+     /* background: #f8a166; */
+}

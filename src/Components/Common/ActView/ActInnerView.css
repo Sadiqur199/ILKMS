@@ -1,0 +1,132 @@
+.ActInner_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*padding: relative;*/
+    margin-left: 160px;
+    margin-right: 20px;
+    /* vh means display height */
+    min-height: calc(100vh - 165px);
+    margin-top: 100px;
+    margin-bottom: 20px;
+    gap: 1rem;
+    background: white;
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+.selectable-content {
+    user-select: text;
+}
+
+.ActInner_top {
+    width: calc(100% - 20px);
+    padding-top: 20px;
+    /* height: 200px; */
+    margin: 10px;
+    background: var(--secondary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ActInner_top_inside {
+    width: 100%;
+    padding: 10px;
+    background: #addbff;
+
+    /*display: flex;*/
+   /* justify-content: flex-end;*/
+
+}
+
+.ActInner_top_inside h5 {
+    color: white;
+    margin: 0px;
+}
+
+.ActInner_top_inside2 {
+    width: 100%;
+    padding: 10px;
+    background: #8accfe;
+
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+
+}
+
+.ActInner_top_inside2 h5 {
+    color: white;
+    margin: 0px;
+}
+
+.ActInner_middle {
+    width: 100%;
+    padding: 0px 30px;
+    font-size: 20px;
+}
+
+.ActInner_middle_two {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ActInner_middle_three {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+.ActInner_last {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 30px;
+    color: var(--primary-color);
+    padding-bottom: 20px;
+    font-size: 20px;
+
+
+}
+
+.ActInner_last_each {
+    width: 100%;
+    display: flex;
+
+    border: 1px solid rgb(236, 236, 234);
+    padding: 10px;
+}
+
+
+/* responsive for mobile devices by siam start*/
+@media all and (max-width:700px) {
+    /* .act_Lnner_view{
+    overflow-x: scroll;
+    scrollbar-width:none;
+    -ms-overflow-style: none;
+
+    white-space: nowrap;
+    }
+ ::-webkit-scrollbar{
+    display: none;
+ } */
+
+
+    .ActInner_top_inside2 {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+    }
+
+}
+

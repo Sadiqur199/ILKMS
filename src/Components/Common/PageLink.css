@@ -1,0 +1,30 @@
+.Homepage_header_div {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    margin-top: 6px;
+    transition: 0.5s;
+    font-family: Kalpurush;
+}
+
+.nagorik_color {
+    color: #ffffff;
+    /*border-bottom: 2px solid #0C6395;*/
+    background: #0C6395;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px 4px;
+}
+
+.inactive {
+    color: #000000;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px 4px;
+}
+
+.gap_div {
+    /*    margin-right: 5px;
+        margin-top: -5px;*/
+}

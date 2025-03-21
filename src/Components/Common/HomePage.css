@@ -1,0 +1,83 @@
+.Homepage_div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+ /*   margin-top: 60px;*/
+    /* vh means display height */
+  /*  min-height: calc(100vh - 225px);*/
+   /* padding: relative;*/
+    margin-left: 40px;
+}
+
+.container_margin {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+.smart_service{
+    /*min-height:  35.5rem;*/
+    background-color: #FDFBFB;
+}
+.flex_div {
+    flex-grow: 1;
+}
+.max_read_header {
+    display: flex;
+    background-color: #0C6395;
+    color: #ffffff;
+    justify-content: flex-start;
+
+    padding: 5px 6px;
+    font-family: Kalpurush;
+    font-size: 12px;
+}
+.container_div_header {
+    display: flex;
+    background-color: #CEE9FD;
+    justify-content: flex-start;
+
+    padding: 5px 6px;
+    font-family: Kalpurush;
+    font-size: 12px;
+}
+
+.container_div_body {
+    /* height: 15em; */
+    min-height: 23rem;
+    background-color: #FDFBFB;
+
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+/*    text-wrap: nowrap!important;*/
+   /* font-size: small;*/
+}
+
+.ain_forum {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.divider_line {
+    width: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+
+@media screen and (max-width: 1040px) {
+    .container_div_body {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0.1rem;
+    }
+}

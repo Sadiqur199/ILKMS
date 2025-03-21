@@ -1,0 +1,48 @@
+.SearchText {
+    width: 100vh;
+    display: flex;
+  
+    background: #ffffff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30.5px;
+    /* border: none; */
+    /* border-color: rgb(71, 81, 81); */
+    border: none;
+  
+    font-size: 16px;
+    padding: 6px;
+  }
+  
+  .searchList {
+    color: black;
+  }
+  
+  
+  /* responsive for mobile devices by siam start*/
+  
+  .SearchIconBtn__2 {
+    margin-top: 10px;
+    margin-left: 90vh;
+    position: absolute;
+    border: none;
+    background-color: white;
+    padding-top: 5px;
+  }
+  
+  
+  @media all and (max-width: 700px) {
+    .SearchText {
+      width: 100%;
+    }
+    .SearchIconBtn__2 {
+      right: 0;
+      top: 0;
+      border-radius: 50%;
+      background-color: white;
+      padding-top: 5px;
+      margin-left: 24px;
+     
+    }
+  }
+  /* responsive for mobile devices by siam end*/
+  

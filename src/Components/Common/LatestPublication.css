@@ -1,0 +1,21 @@
+.latest_publication_main {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.publication_list {
+    display: flex;
+    padding: 3px;
+}
+
+.publication_list h6 {
+    font-size: 12px;
+    font-family: Kalpurush, 'Segoe UI',;
+}
+
+.publication_icon {
+    margin-top: -18px;
+    padding: 10px;
+    color: #0C6395;
+}

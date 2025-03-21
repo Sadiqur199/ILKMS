@@ -1,0 +1,64 @@
+.ebook_content_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: relative;
+    margin-left: 160px;
+    margin-right: 20px;
+    /* vh means display height */
+    min-height: calc(100vh - 225px);
+    margin-top: 60px;
+    gap: 1rem;
+}
+
+.book_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #FDFBFB;
+    padding: 30px;
+
+    
+    /* gap: 1rem; */
+
+}
+
+.book_div_header {
+    display: flex;
+    background-color: #CEE9FD;
+    justify-content: flex-start;
+    width: 100%;
+    color: #0C6395;
+    ;
+
+    padding: 6px 10px;
+    font-family: Kalpurush;
+    font-size: 12px;
+    margin-bottom: -1rem;
+}
+
+
+
+.book_content {
+
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgb(235, 235, 235);
+    /* box-shadow: 2px 2px 2px 2px rgba(112, 112, 112, 1); */
+    width: 35vh;
+    height: 45vh;
+}
+
+.book_content p {
+    margin-top: .5rem;
+    font-size: .8rem;
+    font-weight: bold;
+    font-family: Kalpurush;
+    /* width: 25vh; */
+}
+
+.book_cover {
+    height: 30vh;
+    width: 25vh;
+}

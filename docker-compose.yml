@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/core
+    ports:
+      - 3000:3000
+    image: app:mol
+    container_name: mol_frontend
+    command: npm start

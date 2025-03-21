@@ -1,0 +1,116 @@
+.footer_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  
+    background: #cee9fd;
+    position: inherit;
+    border-top: 4px solid #0c6395;
+  
+  }
+  
+  .footer_content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .border_div {
+    background: #5b6469;
+    width: 1px;
+   
+  }
+  
+  .footer_div p {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .footer_left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer_left p {
+    margin-top: 3px;
+    color: #0c6395;
+  }
+  .footer_bangladesh {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    margin-left: 5px;
+    margin-top: -10px;
+  }
+  
+  .footer_dream {
+    height: 25px;
+    width: 80px;
+    margin-top: -10px;
+  }
+  
+  .footer_google {
+    height: 25px;
+    width: 80px;
+    margin-top: -10px;
+  }
+  
+  .footer_apple {
+    height: 25px;
+    width: 80px;
+    margin-left: 4px;
+    margin-top: -10px;
+  }
+  
+  .footer_copyright {
+   
+    padding-bottom: 5px;
+    border-top: 1px solid #cee9fd;
+  
+  }
+  
+  .footer_copyright p {
+    margin: 0px;
+  }
+  
+  
+    /* responsive for mobile devices by siam start*/
+  
+  @media screen and (max-width: 1040px) {
+    .footer_div {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0.1rem;
+    }
+  }
+  
+  .Footer_margin_left {
+    margin-left: 37px;
+  }
+  .Footer_margin_left_margin_div_true {
+    margin-left: 140px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .footer_div {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* width: 100%; */
+      padding: 0.1rem;
+      position: relative;
+      z-index: 999;
+    }
+  
+    .Footer_margin_left {
+      margin-left: 0px;
+    }
+    .Footer_margin_left_margin_div_true {
+      margin-left: 0px;
+    }
+  }
+    /* responsive for mobile devices by siam end*/
+  

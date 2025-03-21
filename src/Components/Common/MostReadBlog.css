@@ -1,0 +1,108 @@
+.most_read_blog_body {
+    display: flex;
+    background-color: #FDFBFB;
+}
+
+.blog_box {
+    margin: 0px 10px;
+    /* border: 0.5px solid rgba(0, 0, 0, 0.2); */
+    /* border-radius: 5px; */
+    max-width: calc(50% - 20px);
+    width: 48%;   
+}
+
+.overflowDiv {
+    overflow: auto;
+    text-align: justify;
+    max-height: 250px;
+    position: relative;
+}
+
+.overflowDiv .read-more { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    text-align: center; 
+    margin: 0; padding: 15px 0;
+    font-size: 15px; 
+      
+    /* "transparent" only works here because == rgba(0,0,0,0) */
+    background-image: linear-gradient(to bottom, transparent, rgb(248, 251, 253));
+  }
+
+  
+.most_read_blog_cover {
+    height: 130px;
+    width: 180px;
+    padding-right: 12px;
+    padding-top: 7px;
+    float: left;
+}
+
+.most_read_blog_title {
+    font-family: Kalpurush;
+    color: #0C6395;
+}
+
+.most_read_blog_author {
+    font-size: 12px;
+    font-family: Kalpurush;
+}
+
+.most_read_blog_content {
+    padding-top: 15px;
+    font-size: 15px;
+    font-family: Kalpurush;
+}
+
+
+.box_div {
+    background: #FFFFFF;
+    /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); */
+}
+
+.most_read_blog_like {
+    padding: 0px 2px;
+    margin-top: -3px;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.mostread_Blog_follow_button {
+    /* align-items: right; */
+    margin-top: -5px;
+}
+
+.tittle_read_blog {
+    padding-top: 10px;
+    left: 55px;
+    font-weight: bold;
+    color: #1E98FC;
+
+    font-family: kalpurush;
+    font-size: 14px;
+}
+
+.body_read_blog {
+    left: 55px;
+    margin: 10px;
+    font-family: kalpurush;
+    font-size: 10px;
+}
+
+.button_style {
+    background-color: white;
+    border: none;
+    color: #0C6395;
+    font-weight: bold;
+    font-size: small;
+}
+
+.bank_logo {
+    float: left;
+    height: 20vh;
+    width: 17vh;
+    margin: 10px;
+}
+

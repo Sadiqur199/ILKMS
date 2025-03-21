@@ -1,0 +1,11 @@
+.create_forum_content {
+    padding: 10px 20px;
+    width: 400px;
+    margin: auto;
+}
+
+.create_forum_content label {
+    /* padding: 10px; */
+    font-family: Kalpurush;
+    font-size: 12 px;
+}

@@ -1,0 +1,50 @@
+.sign_up_dummy_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: relative;
+    margin-left: 100px;
+    margin-right: 25px;
+    margin-top: 100px;
+    gap: 1rem;
+    min-height: calc(100vh - 165px);
+    margin-bottom: 30px;
+}
+
+.sign_up_content {
+    padding: 30px 20px;
+    width: 400px;
+    margin: auto;
+    /* margin-bottom: 30px; */
+}
+
+.sign_up_content h5 {
+    color: #0C6395;
+    font-family: Kalpurush;
+    font-weight: bold;
+}
+
+.sign_up_content label {
+    font-size: 12px;
+    font-family: Kalpurush;
+}
+
+.avatar_style {
+    background-color: #0C6395 !important;
+    margin-bottom: 10px;
+}
+
+.text_field {
+    margin-top: 10px !important;
+    /* margin-left: calc(100% - 72px); */
+}
+
+.text_field_sign {
+    margin-top: 10px !important;
+    margin-left: calc(100% - 72px);
+}
+@media screen and (max-width: 700px) {
+.sign_up_dummy_div{
+    margin-right: 70px!important;
+}
+}

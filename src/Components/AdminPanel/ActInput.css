@@ -1,0 +1,79 @@
+.ActInputMain {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    justify-content: center;
+
+}
+
+.ActInputInner {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.ActInputEach {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ActInputEachSingle {
+    display: flex;
+    padding: 10px;
+
+}
+
+/*
+table {
+    border: 2px solid forestgreen;
+    width: 700px;
+    height: 100px;
+    margin: 10px;
+
+
+}
+*/
+
+
+/*
+th,td {
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-right: 1px solid forestgreen;
+
+
+}
+*/
+
+
+
+@media all and (max-width: 700px) {
+    /*
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        height: 100px;
+        overflow-x: scroll;
+
+    }
+
+    th, td {
+        padding-left: 1px;
+        padding-right: 1px;
+
+    }
+    */
+
+ /*   tr:nth-child(even){background-color: #f2f2f2}*/
+
+    .ActInputInner {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+
+
+}

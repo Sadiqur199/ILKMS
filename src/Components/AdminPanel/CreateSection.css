@@ -1,0 +1,16 @@
+.CreateSectionMain {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    justify-content: center;
+}
+
+.CreateSectionInner {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-bottom: 30px;
+}

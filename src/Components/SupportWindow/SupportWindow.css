@@ -1,0 +1,66 @@
+
+.Support_window_transition {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    height: 440px;
+    width: 490px;
+    background: white;
+    bottom: 70px;
+
+    position: fixed;
+    overflow: hidden;
+    box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.33);
+    z-index: 10000;
+    border-color: #0C6395;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+
+}
+.Action_Modal {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    height: 500px;
+    width: 700px;
+    background: white;
+    bottom: 70px;
+    left: 300px;
+    position: fixed;
+    overflow: auto;
+    box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.33);
+    z-index: 10000;
+    border-color: #0C6395;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+@media screen and (max-width: 700px) {
+    .Support_window_transition {
+        width: 250px !important;
+
+    }
+    .Action_Modal {
+        width: 265px !important;
+        left: 80px !important;
+        text-align: center!important;
+        padding-top: 5px!important;
+        align-items: center!important;
+        overflow: auto;
+        height: 650px;
+    }
+    .ActInner_top_inside2 h5  {
+        font-size: 5px !important;
+    }
+    .ActInner_top_inside2 .main-act  {
+        font-size: 6px !important;
+    }
+}

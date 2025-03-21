@@ -1,0 +1,83 @@
+.chatbot_div_main {
+    position: fixed;
+    bottom: 5%;
+    right: 0;
+    height: 80px;
+    width: 80px;
+    background: #0c6395;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  
+  .chatbot_hi {
+    position: fixed;
+    bottom: 84%;
+    right: 5px;
+    padding: 5px 8px 5px 8px;
+    margin-bottom: -3px;
+    border-radius: 10px;
+    background: #f4f4f5;
+    z-index: 10000;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.33);
+  }
+  
+  .chatbot_hi p {
+    font-size: 12px;
+    margin-bottom: 0px;
+    font-weight: bold;
+  }
+  
+  
+  
+  /* responsive for mobile devices by siam start*/
+  
+  .transition_div {
+    transition: all 0.33s ease;
+    -webkit-transition: all 0.33s ease;
+    -moz-transition: all 0.33s ease;
+    height: 70px;
+     width: 76px;
+      margin-left: 2px;
+       margin-top: 5px;
+        border-radius: '25px'
+  }
+  
+  .transition_two_div{
+    height: 60px;
+     width: 65px;
+      margin-left:8px;
+      margin-top: 10px;
+       border-radius: 20px;
+  }
+  
+  @media all and (max-width: 700px) {
+    .chatbot_div_main {
+      bottom: 60%;
+      right: 0px;
+      height: 45px;
+      width: 45px;
+      padding-bottom: 24px;
+    }
+  
+    .transition_div {
+     
+      height: 40px;
+       width: 40px;
+        margin-left: 3px;
+         margin-top: 5px;
+          border-radius: 15px;
+    }
+  
+  
+    .transition_two_div{
+      height: 40px;
+      width: 40px;
+       margin-left: 3px;
+        margin-top: 5px;
+         border-radius: 15px;
+    }
+  
+  }
+  
+  /* responsive for mobile devices by siam end*/
+  
