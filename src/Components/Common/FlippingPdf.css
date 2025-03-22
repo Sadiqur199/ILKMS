@@ -1,0 +1,12 @@
+.flipping_pdf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: relative;
+    margin-left: 160px;
+    margin-right: 20px;
+    /* vh means display height */
+    min-height: calc(100vh - 225px);
+    margin-top: 60px;
+    gap: 1rem;
+}

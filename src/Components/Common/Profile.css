@@ -1,0 +1,77 @@
+.profile_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: relative;
+    margin-left: 160px;
+    margin-right: 100px;
+    margin-top: 100px;
+    gap: 1rem;
+    /* vh means display height */
+    min-height: calc(100vh - 165px);
+    margin-bottom: 30px;
+    background: var(--secondary-bg);
+}
+
+.profile_header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1px;
+
+    padding: 5px 6px;
+    font-family: Kalpurush;
+    font-size: 16px;
+    width: 100%;
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profile_body {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.profile_img_name {
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    width: 100%;
+}
+
+.profile_img_name img {
+    height: 150px;
+    width: 150px;
+    background: #F5F5F5;
+}
+
+.name_email_phone {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.profile_name_color {
+    background-color: #F5F5F5;
+    display: flex;
+    
+}
+
+.profile_font {
+    padding: 12px;
+    width: 30%;
+    border: 1px solid #D9D9D9;
+}
+
+.profile_font_two {
+    padding: 12px;
+    width: 70%;
+    border: 1px solid #D9D9D9;
+}
+
+.profile_other {
+    width: 100%;
+    padding: 20px 0px; 
+}
