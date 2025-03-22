@@ -71,7 +71,11 @@ const HomePageNew = () => {
             '/ordinances',
             '/presidentorders',
             '/rules',
+<<<<<<< HEAD
             '/regulations',
+=======
+            'regulations',
+>>>>>>> origin/main
         ];
         const linkFlowers = [
             '/policies',

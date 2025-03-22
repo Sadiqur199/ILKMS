@@ -173,6 +173,7 @@ const EbookComment = () => {
                  console.log(err)
              })
      }
+<<<<<<< HEAD
      const handleEmailShare = () => {
         const subject = encodeURIComponent("Check out this E-book");
         const body = encodeURIComponent(`I found this interesting E-book: ${ebookURL}`);
@@ -184,6 +185,9 @@ const EbookComment = () => {
         window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=&su=${subject}&body=${body}`, '_blank');
     };
     
+=======
+
+>>>>>>> origin/main
     return (
         <div className='ebook_comment_main' style={{marginLeft: marginDiv ? '155px' : '50px', transition: '.5s'}}>
             <Helmet>
@@ -278,11 +282,17 @@ const EbookComment = () => {
                                         <WhatsappShareButton url={ebookURL} onClick={handleShareCount}>
                                             <WhatsappIcon size={24} style={{marginBottom: '5px'}}/>
                                         </WhatsappShareButton>
+<<<<<<< HEAD
                                         {/* <EmailShareButton url={ebookURL} onClick={handleShareCount}>
                                             <EmailIcon size={24} style={{marginBottom: '5px'}}/>
                                         </EmailShareButton> */}
                                         <EmailIcon size={24} style={{ marginBottom: '5px', cursor: 'pointer' }} onClick={handleEmailShare} />
 
+=======
+                                        <EmailShareButton url={ebookURL} onClick={handleShareCount}>
+                                            <EmailIcon size={24} style={{marginBottom: '5px'}}/>
+                                        </EmailShareButton>
+>>>>>>> origin/main
                                         <LinkedinShareButton url={ebookURL} onClick={handleShareCount}>
                                             <LinkedinIcon size={24} style={{marginBottom: '5px'}}/>
                                         </LinkedinShareButton>
