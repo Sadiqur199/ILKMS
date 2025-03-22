@@ -24,13 +24,10 @@
 .selectable-content {
     user-select: text;
 }
-<<<<<<< HEAD
+
 .button-space {
     margin-right: 15px;  /* Adjust this value for desired spacing */
 }
-=======
->>>>>>> origin/main
-
 .ActInner_top {
     width: calc(100% - 20px);
     padding-top: 20px;

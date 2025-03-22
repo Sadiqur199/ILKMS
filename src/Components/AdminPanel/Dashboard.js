@@ -122,11 +122,8 @@ const Dashboard = () => {
                                                         {convertNumber(rules)}
                                                     </div>
                                                     <div className='card-footer'>
-<<<<<<< HEAD
                                                         <Link to='/admin/rule/list' className='btn btn-primary'>বিস্তারিত</Link>
-=======
                                                         <Link to='/adminrule/list' className='btn btn-primary'>বিস্তারিত</Link>
->>>>>>> origin/main
                                                     </div>
                                                 </div>
                                             </div>
@@ -137,11 +134,8 @@ const Dashboard = () => {
                                                         {convertNumber(regulations)}
                                                     </div>
                                                     <div className='card-footer'>
-<<<<<<< HEAD
                                                         <Link to='/admin/regulation/list' className='btn btn-primary'>বিস্তারিত</Link>
-=======
                                                         <Link to='/admin' className='btn btn-primary'>বিস্তারিত</Link>
->>>>>>> origin/main
                                                     </div>
                                                 </div>
                                             </div>
@@ -243,7 +237,7 @@ const Dashboard = () => {
                                                         {convertNumber(users)}
                                                     </div>
                                                     <div className='card-footer'>
-                                                        <Link to='/admin/users' className='btn btn-primary'>বিস্তারিত</Link>
+                                                        <Link to='admin/users' className='btn btn-primary'>বিস্তারিত</Link>
                                                     </div>
                                                 </div>
                                             </div>

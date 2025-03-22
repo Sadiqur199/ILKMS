@@ -127,11 +127,6 @@ const Circular = () => {
                 }
             })
     }
-<<<<<<< HEAD
-
-    
-=======
->>>>>>> origin/main
     return (
         <div className='category_main_div' style={{marginLeft: marginDiv ? '155px' : '50px'}}>
                     <div className="row mt-4">
