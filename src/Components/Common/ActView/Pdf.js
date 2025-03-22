@@ -295,7 +295,7 @@ const Pdf = () => {
     };
 
     let params = useParams();
-
+git 
     useEffect(() => {
         liveActDataFunction();
         actDetailFunction();
