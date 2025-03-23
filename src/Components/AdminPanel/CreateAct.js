@@ -66,22 +66,12 @@ const CreateAct = () => {
             /!* alert(data)*!/
             setProposal(event.target.value);
         };*/
-  const editorConfiguration = {
-    toolbar: ["heading", "bold", "italic", "link", "undo", "redo"],
-    language: "en",
-    image: {
-      toolbar: [
-        "imageStyle:full",
-        "imageStyle:side",
-        "|",
-        "imageTextAlternative",
-      ],
-    },
-  };
   const getDataFromEditor = (event, editor) => {
     const data = editor.getData();
+    console.log(data)
     setProposal(data);
   };
+
   const handleObjective = (event, editor) => {
     //  setObjective(event.target.value);
 
@@ -157,6 +147,7 @@ const CreateAct = () => {
         }
       });
   };
+
   return (
     <div
       className="category_main_div"

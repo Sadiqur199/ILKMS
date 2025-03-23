@@ -69,7 +69,7 @@ function EbookView() {
                     </div>
 
                 )}
-                <div className="row">
+                <div className="row" >
                     {post.number && (
                     <div className='col-md-6'>
                         {post.number}
@@ -80,10 +80,10 @@ function EbookView() {
                         <div className="row">
                             <div className='col-md-6'>
                               <span className='float-end mt-4'>
-                                  তারিখ :
+                                  তারিখ:
                               </span>
                             </div>
-                            <div className='col-md-6'>
+                            <div className='col-md-6 text-center'>
                                 <span>{post.created_at_bn}</span>
                                     <hr/>
                                 <span>{post.created_at_en}</span>
@@ -94,22 +94,26 @@ function EbookView() {
                     )}
                 </div>
                 {post.ebooks_type && (
-                    <div className='text-center mb-2'>
-                        <b className='text-decoration-underline'>{post.ebooks_type}</b>
+                    <div className='text-center mb-5'>
+                        <h5 className='text-decoration-underline text-bold'>{post.ebooks_type}</h5>
                     </div>
                 )}
-                <h6>বিষয়: <b>{post.title_of_act}</b></h6>
+                <h4 className='mt-5'>বিষয়: <b>{post.title_of_act}</b></h4>
                 {post.motto && (
                     <h6>সূত্র : <b>{post.motto}</b></h6>
                 )}
             </div>
             {post.schedules && (
-            <div dangerouslySetInnerHTML={{__html: post.schedules}} style={{
-                padding: '0px 30px'
+            <div dangerouslySetInnerHTML={{__html: post.schedules}}   style={{
+                padding: '0px 30px',
+                maxWidth: '100%', // Ensures text stays within container's width
+                width: '100%', // Take full width of the parent container
+                overflowWrap: 'break-word', // Prevents text from overflowing
+                textAlign: 'justify', // Justifies the text
             }}/>
             )}
             {(post.signature_by || post.signature_position) && (
-                <div className='d-flex justify-content-end w-75 flex-column align-items-end'>
+                <div className='d-flex justify-content-end w-auto flex-column align-items-end'>
                     {post.signature_by && (
                         <b >{post.signature_by}</b>
                     )}

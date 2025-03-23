@@ -107,26 +107,15 @@ const View = () => {
         console.log(err);
       });
   }
+  const handleEmailShare = () => {
+    const subject = encodeURIComponent("Check out this E-book");
+    const body = encodeURIComponent(`I found this interesting E-book: ${ebookURL}`);
+    
+    handleShareCount();
 
-  /*function actFileFunction() {
-        axios.post(
-            `/api/getactspdf/`, {
-                act_id: params.id
-            }
-        )
-            .then(res => {
-                let cover = axios.defaults.baseURL + "/uploads/" + res.data.data.cover;
-                /!*  setPost({...post,cover:cover})*!/
-                /!*                setPost(prevState => {
-                                    return {...prevState, cover: cover}
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=&su=${subject}&body=${body}`, '_blank');
+};
 
-                                })*!/
-                setCover(cover)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    }*/
 
   useEffect(() => {
     axios
@@ -306,16 +295,7 @@ const View = () => {
                     {/* <EmailShareButton url={ebookURL} onClick={handleShareCount}>
                                             <EmailIcon size={24} style={{marginBottom: '5px'}}/>
                                         </EmailShareButton> */}
-                    <EmailShareButton
-                      url={ebookURL}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        window.location.href = `mailto:?subject=Check out this eBook&body=I found this interesting eBook: ${ebookURL}`;
-                        handleShareCount();
-                      }}
-                    >
-                      <EmailIcon size={24} style={{ marginBottom: "5px" }} />
-                    </EmailShareButton>
+                 <EmailIcon size={24} style={{ marginBottom: '5px', cursor: 'pointer' }} onClick={handleEmailShare} />
 
                     <LinkedinShareButton
                       url={ebookURL}

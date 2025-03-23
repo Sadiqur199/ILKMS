@@ -122,7 +122,32 @@ const BlogInner = () => {
             })
 
     }, [params.id])
-
+    const handleShareCount = () => {
+        // Assuming you have an API or logic for updating the share count
+        if (token) {
+            axios.post('/api/blogs/sharecount/', {
+                jwt: token,
+                blog_id: params.id,
+            })
+            .then(response => {
+                // Optionally, update the share count on the UI
+                fetchMostReadBlog();  // Or any other function to re-fetch updated data
+            })
+            .catch(err => console.log(err));
+        }
+    };
+    
+    const handleEmailShare = () => {
+        const subject = encodeURIComponent("Check out this Blog-URL");
+        const body = encodeURIComponent(`I found this interesting Blog: ${blogURL}`);
+        
+        // Share count increment function call
+        handleShareCount();
+    
+        // Open Gmail compose window
+        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=&su=${subject}&body=${body}`, '_blank');
+    };
+    
     return (
         <div className='Blog_Inner_main' style={{marginLeft: marginDiv ? '155px' : '50px'}}>
             <Helmet>
@@ -194,9 +219,10 @@ const BlogInner = () => {
                                     <WhatsappShareButton url={blogURL}>
                                         <WhatsappIcon size={24} style={{marginBottom: '5px'}}/>
                                     </WhatsappShareButton>
-                                    <EmailShareButton url={blogURL}>
+                                    {/* <EmailShareButton url={blogURL}>
                                         <EmailIcon size={24} style={{marginBottom: '5px'}}/>
-                                    </EmailShareButton>
+                                    </EmailShareButton> */}
+                                    <EmailIcon size={24} style={{ marginBottom: '5px', cursor: 'pointer' }} onClick={handleEmailShare} />
                                     <LinkedinShareButton url={blogURL}>
                                         <LinkedinIcon size={24} style={{marginBottom: '5px'}}/>
                                     </LinkedinShareButton>

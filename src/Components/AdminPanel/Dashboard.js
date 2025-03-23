@@ -123,11 +123,10 @@ const Dashboard = () => {
                                                     </div>
                                                     <div className='card-footer'>
                                                         <Link to='/admin/rule/list' className='btn btn-primary'>বিস্তারিত</Link>
-                                                        <Link to='/adminrule/list' className='btn btn-primary'>বিস্তারিত</Link>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className='col-md-3 col-lg-3'>
+                                            {/* <div className='col-md-3 col-lg-3'>
                                                 <div className='card '>
                                                     <div className='card-header'>প্রবিধান</div>
                                                     <div className='card-body'>
@@ -135,10 +134,9 @@ const Dashboard = () => {
                                                     </div>
                                                     <div className='card-footer'>
                                                         <Link to='/admin/regulation/list' className='btn btn-primary'>বিস্তারিত</Link>
-                                                        <Link to='/admin' className='btn btn-primary'>বিস্তারিত</Link>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> */}
                                             <div className='col-md-3 col-lg-3'>
                                                 <div className='card '>
                                                     <div className='card-header'>নীতিমালা</div>
