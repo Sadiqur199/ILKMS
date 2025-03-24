@@ -64,7 +64,7 @@ const ActInitialView = () => {
                         <h6 style={{ fontWeight: 'bold' }}>{post.title_of_act}</h6>
                         {/* <p>লেখকঃ {post.author}</p> */}
                         <p>প্রকাশের তারিখঃ {post.publication_date}</p>
-                        <div>
+                        <div c>
                             <div dangerouslySetInnerHTML={{ __html: post.proposal }} />
                             <br/>
                             <div dangerouslySetInnerHTML={{ __html: post.objective }} />

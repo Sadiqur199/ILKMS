@@ -180,15 +180,26 @@ const BlogInner = () => {
                         marginTop: '-10px',
                         fontSize: '10px',
                     }}>{post.created_date?.slice(0, 10)}</p>
-                    <div className='content_scroll'>
-                        {post.cover !== null ?
-                            <>
-                                <img src={post.cover} className='blog_inner_cover_image'/>
-                                <div dangerouslySetInnerHTML={{__html: post.content}}/>
-                            </> :
-                            <div dangerouslySetInnerHTML={{__html: post.content}}/>
-                        }
-                    </div>
+                    <div className="content_scroll">
+    <style>
+        {`
+            .content_scroll a {
+                color: blue !important;
+                text-decoration: underline !important;
+            }
+        `}
+    </style>
+    
+    {post.cover !== null ? (
+        <>
+            <img src={post.cover} className="blog_inner_cover_image" />
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        </>
+    ) : (
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+    )}
+</div>
+
                     <Grid style={{display: 'flex', marginTop: '0px', padding: '10px'}}>
                         <VisibilityIcon sx={{fontSize: 16, marginTop: '4px', color: "#0C6395"}}/>
                         <div className='like_comment_padding'>{post.viewer_counter}</div>

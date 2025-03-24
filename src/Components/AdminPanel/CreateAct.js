@@ -14,6 +14,36 @@ import DropdownList from "react-widgets/DropdownList";
 import AddSomething from "./AddSomething";
 import { toast } from "react-toastify";
 
+class MyUploadAdapter {
+  constructor(loader) {
+    this.loader = loader;
+  }
+
+  // Converts the file to Base64 and resolves the URL
+  upload() {
+    return this.loader.file.then(
+      (file) =>
+        new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.readAsDataURL(file);
+          reader.onload = () => resolve({ default: reader.result }); // Base64 image
+          reader.onerror = (error) => reject(error);
+        })
+    );
+  }
+
+  abort() {
+    console.log("Upload aborted");
+  }
+}
+
+// Plugin to integrate the custom upload adapter
+function CustomUploadAdapterPlugin(editor) {
+  editor.plugins.get("FileRepository").createUploadAdapter = (loader) => {
+    return new MyUploadAdapter(loader);
+  };
+}
+
 const CreateAct = () => {
   const { token, marginDiv } = useAuth();
   const accessToken = localStorage.getItem("access");
@@ -68,7 +98,7 @@ const CreateAct = () => {
         };*/
   const getDataFromEditor = (event, editor) => {
     const data = editor.getData();
-    console.log(data)
+    console.log(data);
     setProposal(data);
   };
 
@@ -210,12 +240,65 @@ const CreateAct = () => {
                 data={proposal}
                 onChange={getDataFromEditor}
                 config={{
+                  extraPlugins: [CustomUploadAdapterPlugin], // Add the custom plugin
                   placeholder: "প্রস্তাব",
+                  toolbar: [
+                    "heading",
+                    "|",
+                    "bold",
+                    "italic",
+                    "link",
+                    "uploadImage",
+                    "blockQuote",
+                    "insertTable",
+                    "undo",
+                    "redo",
+                  ],
+                  image: {
+                    toolbar: [
+                      "imageStyle:full",
+                      "imageStyle:side",
+                      "|",
+                      "toggleImageCaption",
+                      "imageTextAlternative",
+                    ],
+                  },
                 }}
               />
             </div>
             <div>
-              <CKEditor
+            <CKEditor
+                className="text_field"
+                editor={ClassicEditor}
+                data={objective}
+                onChange={handleObjective}
+                config={{
+                  extraPlugins: [CustomUploadAdapterPlugin], // Add the custom plugin
+                  placeholder: "উদ্দেশ্য",
+                  toolbar: [
+                    "heading",
+                    "|",
+                    "bold",
+                    "italic",
+                    "link",
+                    "uploadImage",
+                    "blockQuote",
+                    "insertTable",
+                    "undo",
+                    "redo",
+                  ],
+                  image: {
+                    toolbar: [
+                      "imageStyle:full",
+                      "imageStyle:side",
+                      "|",
+                      "toggleImageCaption",
+                      "imageTextAlternative",
+                    ],
+                  },
+                }}
+              />
+              {/* <CKEditor
                 className="text_field"
                 editor={ClassicEditor}
                 data={objective}
@@ -232,7 +315,7 @@ const CreateAct = () => {
                     );
                   });
                 }}
-              />
+              /> */}
             </div>
           </div>
           <div
@@ -402,7 +485,7 @@ const CreateAct = () => {
             />
 
             <div className="mt-2">
-              <CKEditor
+              {/* <CKEditor
                 className="text_field"
                 editor={ClassicEditor}
                 data={footer}
@@ -410,6 +493,38 @@ const CreateAct = () => {
                 config={{
                   placeholder: "ফুটার",
                   height: "2000",
+                }}
+              /> */}
+
+<CKEditor
+                className="text_field"
+                editor={ClassicEditor}
+                data={footer}
+                onChange={handleFooter}
+                config={{
+                  extraPlugins: [CustomUploadAdapterPlugin], // Add the custom plugin
+                  placeholder: "ফুটার",
+                  toolbar: [
+                    "heading",
+                    "|",
+                    "bold",
+                    "italic",
+                    "link",
+                    "uploadImage",
+                    "blockQuote",
+                    "insertTable",
+                    "undo",
+                    "redo",
+                  ],
+                  image: {
+                    toolbar: [
+                      "imageStyle:full",
+                      "imageStyle:side",
+                      "|",
+                      "toggleImageCaption",
+                      "imageTextAlternative",
+                    ],
+                  },
                 }}
               />
             </div>
