@@ -182,6 +182,7 @@ const Presidentorders = () => {
 
                                     <th scope="row"><Link to={"/ebook/temp/view/" + eachAct.id}>{convertToBengaliNumber(index+1)}</Link></th>
                                     <td><Link to={"/createsection/" + eachAct.id}>{eachAct.title_of_act}</Link></td>
+                                    {/* <td><Link to={"/ebook/temp/view/" + eachAct.id}>{eachAct.title_of_act}</Link></td> */}
                                     <td>{convertToBengaliNumber(eachAct.act_year)}   </td>
                                     <td>{convertToBengaliNumber(eachAct.number)} </td>
                                     <td>{convertToBengaliNumber(eachAct.publication_date)}</td>
