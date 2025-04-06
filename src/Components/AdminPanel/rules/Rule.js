@@ -15,6 +15,36 @@ import { BiLeftArrowAlt } from "react-icons/bi";
 /*import {toast, ToastContainer} from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";*/
 
+class MyUploadAdapter {
+  constructor(loader) {
+    this.loader = loader;
+  }
+
+  // Converts the file to Base64 and resolves the URL
+  upload() {
+    return this.loader.file.then(
+      (file) =>
+        new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.readAsDataURL(file);
+          reader.onload = () => resolve({ default: reader.result }); // Base64 image
+          reader.onerror = (error) => reject(error);
+        })
+    );
+  }
+
+  abort() {
+    console.log("Upload aborted");
+  }
+}
+
+// Plugin to integrate the custom upload adapter
+function CustomUploadAdapterPlugin(editor) {
+  editor.plugins.get("FileRepository").createUploadAdapter = (loader) => {
+    return new MyUploadAdapter(loader);
+  };
+}
+
 const Rule = () => {
   const { token } = useAuth();
   const accessToken = localStorage.getItem("access");
@@ -202,7 +232,7 @@ const Rule = () => {
                     }}
                   >
                     <div>
-                      <CKEditor
+                      {/* <CKEditor
                         className="text_field"
                         editor={ClassicEditor}
                         data={proposal}
@@ -210,10 +240,41 @@ const Rule = () => {
                         config={{
                           placeholder: "প্রস্তাব",
                         }}
+                      /> */}
+                      <CKEditor
+                        className="text_field"
+                        editor={ClassicEditor}
+                        data={proposal}
+                        onChange={getDataFromEditor}
+                        config={{
+                          extraPlugins: [CustomUploadAdapterPlugin],
+                          placeholder: "প্রস্তাব",
+                          toolbar: [
+                            "heading",
+                            "|",
+                            "bold",
+                            "italic",
+                            "link",
+                            "uploadImage",
+                            "blockQuote",
+                            "insertTable",
+                            "undo",
+                            "redo",
+                          ],
+                          image: {
+                            toolbar: [
+                              "imageStyle:full",
+                              "imageStyle:side",
+                              "|",
+                              "toggleImageCaption",
+                              "imageTextAlternative",
+                            ],
+                          },
+                        }}
                       />
                     </div>
                     <div>
-                      <CKEditor
+                      {/* <CKEditor
                         className="text_field"
                         editor={ClassicEditor}
                         data={objective}
@@ -221,10 +282,41 @@ const Rule = () => {
                         config={{
                           placeholder: "উদ্দেশ্য",
                         }}
+                      /> */}
+                       <CKEditor
+                        className="text_field"
+                        editor={ClassicEditor}
+                        data={objective}
+                        onChange={handleObjective}
+                        config={{
+                          extraPlugins: [CustomUploadAdapterPlugin],
+                          placeholder: "উদ্দেশ্য",
+                          toolbar: [
+                            "heading",
+                            "|",
+                            "bold",
+                            "italic",
+                            "link",
+                            "uploadImage",
+                            "blockQuote",
+                            "insertTable",
+                            "undo",
+                            "redo",
+                          ],
+                          image: {
+                            toolbar: [
+                              "imageStyle:full",
+                              "imageStyle:side",
+                              "|",
+                              "toggleImageCaption",
+                              "imageTextAlternative",
+                            ],
+                          },
+                        }}
                       />
                     </div>
                     <div>
-                      <CKEditor
+                      {/* <CKEditor
                         className="text_field"
                         editor={ClassicEditor}
                         data={schedule}
@@ -232,6 +324,37 @@ const Rule = () => {
                         config={{
                           placeholder: "তফসিল",
                           height: "2000",
+                        }}
+                      /> */}
+                      <CKEditor
+                        className="text_field"
+                        editor={ClassicEditor}
+                        data={schedule}
+                        onChange={handleSchedule}
+                        config={{
+                          extraPlugins: [CustomUploadAdapterPlugin],
+                          placeholder: "তফসিল",
+                          toolbar: [
+                            "heading",
+                            "|",
+                            "bold",
+                            "italic",
+                            "link",
+                            "uploadImage",
+                            "blockQuote",
+                            "insertTable",
+                            "undo",
+                            "redo",
+                          ],
+                          image: {
+                            toolbar: [
+                              "imageStyle:full",
+                              "imageStyle:side",
+                              "|",
+                              "toggleImageCaption",
+                              "imageTextAlternative",
+                            ],
+                          },
                         }}
                       />
                     </div>
